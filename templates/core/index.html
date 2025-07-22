@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% csrf_token %}
+
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+    function pss() {
+        const csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+
+        fetch('/api/ss', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": csrfToken,
+            },
+            body: JSON.stringify({
+                pn: "Index",
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.msg);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+    }
+
+    const timeoutId = setTimeout(() => {
+        pss();
+    }, 5000);
+</script>
+
+{% endblock %}

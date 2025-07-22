@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+
+    {% block seo %}{% endblock %}
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="{% static 'assets/css/base.css' %}">
+
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    
+    {% block content %}{% endblock %}
+
+    <script src="{% static 'assets/js/base.js' %}"></script>
+
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>
