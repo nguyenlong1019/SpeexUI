@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+:root {
+    /* Slider */
+    --slider-arrow-size: 44px;
+    --slider-arrow-bg: #fff;
+    --slider-arrow-color: #0070ff;
+    --slider-border-radius: 12px;
+    --slider-gap: 24px;
+}
+
 * {
     margin: 0;
     padding: 0;

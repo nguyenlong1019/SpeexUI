@@ -1,0 +1,53 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'assets/css/components/slide.css' %}">
+<div class="slider" id="sliderDemo">
+    <button class="slider-btn prev" data-slider-prev>
+        <i class="ri-arrow-left-s-line"></i>
+    </button>
+
+    <div class="slider-track" data-slider-track>
+        <div class="slide">
+            <img src="{% static 'assets/images/components/slider/img1.jpg' %}" alt="Slide Image 1">
+        </div>
+        <div class="slide">
+            <img src="{% static 'assets/images/components/slider/img2.jpg' %}" alt="Slide Image 2">
+        </div>
+        <div class="slide">
+            <img src="{% static 'assets/images/components/slider/img3.jpg' %}" alt="Slide Image 3">
+        </div>
+        <div class="slide">
+            <img src="{% static 'assets/images/components/slider/img4.jpg' %}" alt="Slide Image 4">
+        </div>
+        <div class="slide">
+            <img src="{% static 'assets/images/components/slider/img1.jpg' %}" alt="Slide Image 1">
+        </div>
+        <div class="slide">
+            <img src="{% static 'assets/images/components/slider/img2.jpg' %}" alt="Slide Image 2">
+        </div>
+        <div class="slide">
+            <img src="{% static 'assets/images/components/slider/img3.jpg' %}" alt="Slide Image 3">
+        </div>
+        <div class="slide">
+            <img src="{% static 'assets/images/components/slider/img4.jpg' %}" alt="Slide Image 4">
+        </div>
+    </div>
+
+    <button class="slider-btn next" data-slider-next>
+        <i class="ri-arrow-right-s-line"></i>
+    </button>
+
+    <div class="slider-dots" data-slider-dots></div>
+</div>
+<script src="{% static 'assets/js/components/slider.js' %}"></script>
+<script>
+    new Slider(document.getElementById('sliderDemo'), {
+        slidesToShow: {
+            default: 1,
+            768: 2,
+            992: 3,
+            1140: 4
+        },
+        autoplay: true,
+        interval: 5000
+    });
+</script>
